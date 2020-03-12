@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const helmet = require('helmet');
+const cors = require('cors');
 require('dotenv/config');
 
 // Import routes:
@@ -8,6 +10,8 @@ const noteRoute = require('./routes/note');
 const server = express();
 const port = process.env.PORT || 5000;
 
+server.use(helmet());
+server.use(cors());
 server.use(express.json());
 
 // Connect to the MongoDB:

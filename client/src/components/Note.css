@@ -1,0 +1,14 @@
+.note {
+  width: 25%;
+  padding: 1em;
+  background-color: aquamarine;
+}
+
+.note__title {
+  padding: 0.5em;
+  background-color: beige;
+}
+
+.note__body {
+  padding: 0.25em;
+}
