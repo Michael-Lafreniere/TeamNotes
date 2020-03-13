@@ -1,27 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Note from './Note';
+import Query from '../utils/Query';
 
 const NoteFeed = () => {
-  const [notes, setNotes] = useState(null);
-
-  useEffect(() => {
-    const fetchNotes = async () => {
-      fetch('http://localhost:5000/note')
-        .then(response => response.json())
-        .then(data => setNotes(data))
-        .catch(error => console.log(error));
-    };
-
-    fetchNotes();
-  }, []);
+  const { data: notes, loading } = Query('http://localhost:5000/note');
 
   return (
     <>
-      {notes === null
-        ? null
-        : notes.map((note, index) => {
-            return <Note key={index} data={note} />;
-          })}
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        notes.map((note, index) => {
+          return <Note key={index} data={note} />;
+        })
+      )}
     </>
   );
 };
