@@ -8,7 +8,7 @@ import './Note.css';
 
 const Note = data => {
   const [note] = useState(data.data);
-  //   console.log('note:', note);
+
   return (
     <div className="note">
       <div className="note__title">Title: {note.title}</div>

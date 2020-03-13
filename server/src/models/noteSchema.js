@@ -14,6 +14,26 @@ const noteSchema = new schema({
     type: String,
     required: true
   },
+  comments: {
+    type: Array,
+    default: undefined,
+    userID: {
+      type: Number,
+      required: true
+    },
+    comment: {
+      type: String,
+      required: true
+    },
+    created_date: {
+      type: Date,
+      default: Date.now
+    },
+    modified_date: {
+      type: Date,
+      default: Date.now
+    }
+  },
   created_date: {
     type: Date,
     default: Date.now

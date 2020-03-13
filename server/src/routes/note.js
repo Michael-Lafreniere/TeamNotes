@@ -17,6 +17,7 @@ router.post('/', async (req, res) => {
     userID: req.body.userID,
     title: req.body.title,
     body: req.body.body
+    // comments: req.body.comments
   });
 
   try {
