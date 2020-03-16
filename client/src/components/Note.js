@@ -13,6 +13,7 @@ const Note = data => {
     <div className="note">
       <div className="note__title">Title: {note.title}</div>
       <div className="note__body">Note: {note.body}</div>
+      {/* <div>Comments: {note.comments}</div> */}
     </div>
   );
 };

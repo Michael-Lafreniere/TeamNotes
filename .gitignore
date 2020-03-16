@@ -4,3 +4,4 @@ server/node_modules
 server/package-lock.json
 server/.env
 notes.txt
+serverTest.rest
