@@ -1,5 +1,12 @@
+:root {
+  --background-color: rgb(104, 104, 104);
+  --title-background: rgb(50, 50, 50);
+  --body-background: rgb(200, 200, 200);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: black;
 }

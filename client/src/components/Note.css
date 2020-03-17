@@ -1,14 +1,23 @@
 .note {
-  width: 25%;
-  padding: 1em;
-  background-color: aquamarine;
+  width: 35%;
+  padding: 1.5em;
+  background-color: var(--background-color);
+  border-radius: 0.7em;
+  margin: 0.5em 0;
 }
 
 .note__title {
-  padding: 0.5em;
-  background-color: beige;
+  padding: 0.75em;
+  color: white;
+  background-color: var(--title-background);
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
 }
 
 .note__body {
-  padding: 0.25em;
+  padding: 0.75em;
+  color: black;
+  background-color: var(--body-background);
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
 }

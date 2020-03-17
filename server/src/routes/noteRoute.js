@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  console.log('note', res.body);
+  // console.log('note', req.body);
   const note = new noteSchema({
     userID: req.body.userID,
     title: req.body.title,

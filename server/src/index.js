@@ -33,7 +33,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Middleware for routes:
-server.use('/test', commentRoute);
+server.use('/comment', commentRoute);
 server.use('/note', noteRoute);
 
 server.listen(port, () =>
