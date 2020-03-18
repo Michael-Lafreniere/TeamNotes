@@ -10,3 +10,16 @@
   box-sizing: border-box;
   background-color: black;
 }
+
+header {
+  width: 100%;
+  display: flex;
+  padding: 1em 0;
+  background: var(--background-color);
+  justify-content: center;
+}
+
+.title {
+  background: var(--background-color);
+  color: white;
+}
