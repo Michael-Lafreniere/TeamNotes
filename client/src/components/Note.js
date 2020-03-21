@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Query from '../utils/Query';
 
 import './Note.css';
 import './Comment.css';
@@ -9,11 +10,13 @@ const Comment = ({ data: comment }) => {
 
 const Note = data => {
   const [note] = useState(data.data);
-  // console.log('note:', note);
+  const { data: noteComments } = Query(`http://localhost:5000/comment`, 'GET', {
+    noteID: `${note._id}`
+  });
 
   let comments;
-  if (note.comments !== undefined) {
-    comments = note.comments.map((comment, index) => {
+  if (noteComments !== undefined) {
+    comments = noteComments.map((comment, index) => {
       return <Comment key={index} data={comment.comment} />;
     });
   }
