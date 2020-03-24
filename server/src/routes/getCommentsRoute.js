@@ -4,9 +4,20 @@ const commentSchema = require('../models/commentSchema');
 const router = express.Router();
 
 router.post('/', async (req, res) => {
-  console.log(req.body);
   try {
     const comments = await commentSchema.find({ noteID: req.body.noteID });
+    // .populate('Users')
+    // .exec((error, doc) => {
+    //   console.log('doc:', doc);
+    //   if (error) console.log('error:', error);
+    // });
+    // ).populate({
+    //   $lookup: {
+    //     from: 'Users',
+    //     localField: userID,
+    //     foreignField: _id
+    //   }
+    // });
     // console.table(comments);
     res.status(200).json(comments);
   } catch (error) {

@@ -5,6 +5,7 @@ import './Note.css';
 import './Comment.css';
 
 const Comment = ({ data: comment }) => {
+  // console.log('comment data:', comment);
   return <div className="comment">{comment}</div>;
 };
 
@@ -14,6 +15,7 @@ const Note = noteData => {
 
   let comments;
   if (data !== undefined && data.data !== undefined) {
+    console.table(data.data);
     comments = data.data.map((comment, index) => {
       return <Comment key={index} data={comment.comment} />;
     });
