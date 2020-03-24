@@ -7,6 +7,7 @@ require('dotenv/config');
 // Import routes:
 const noteRoute = require('./routes/noteRoute');
 const commentRoute = require('./routes/commentRoute');
+const getCommentsRoute = require('./routes/getCommentsRoute');
 
 const server = express();
 const port = process.env.PORT || 5000;
@@ -34,6 +35,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // Middleware for routes:
 server.use('/comment', commentRoute);
+server.use('/comments', getCommentsRoute);
 server.use('/note', noteRoute);
 
 server.listen(port, () =>

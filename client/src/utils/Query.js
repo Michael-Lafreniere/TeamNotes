@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function Query(url, method = 'GET', body = null) {
+export default function Query(url) {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
@@ -8,12 +8,7 @@ export default function Query(url, method = 'GET', body = null) {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      console.log('.');
-      const data = await fetch(url, {
-        method: method,
-        headers: { 'Content-Type': 'application/json' },
-        body: body
-      })
+      const data = await fetch(url)
         .then(response => response.json())
         .catch(error => setError(error));
       setData(data);
@@ -21,13 +16,7 @@ export default function Query(url, method = 'GET', body = null) {
     };
 
     fetchData();
-  }, [url, method]);
+  }, [url]);
 
   return { data, loading, error };
 }
-
-// method: 'POST',
-// headers: {
-//  'Content-Type': 'application/json'
-// },
-// body: JSON.stringify({ location, end })
