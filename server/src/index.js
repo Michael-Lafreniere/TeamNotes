@@ -8,6 +8,7 @@ require('dotenv/config');
 const noteRoute = require('./routes/noteRoute');
 const commentRoute = require('./routes/commentRoute');
 const getCommentsRoute = require('./routes/getCommentsRoute');
+const userRoute = require('./routes/userRoute');
 
 const server = express();
 const port = process.env.PORT || 5000;
@@ -37,6 +38,7 @@ if (process.env.NODE_ENV === 'production') {
 server.use('/comment', commentRoute);
 server.use('/comments', getCommentsRoute);
 server.use('/note', noteRoute);
+server.use('/username', userRoute);
 
 server.listen(port, () =>
   console.log(`Server successfully started, listening on port: ${port}.`)

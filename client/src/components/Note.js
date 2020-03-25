@@ -1,23 +1,35 @@
 import React, { useState } from 'react';
-import { QueryComments } from '../utils/Query';
+import { QueryData } from '../utils/Query';
 
 import './Note.css';
 import './Comment.css';
 
-const Comment = ({ data: comment }) => {
-  // console.log('comment data:', comment);
-  return <div className="comment">{comment}</div>;
+const Comment = ({ data: comment, user }) => {
+  const { data: name, loading } = QueryData('username', user);
+  return (
+    <div className="comment-parent">
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <div className="comment">
+          {comment}&nbsp;<div className="comment-name">{name}</div>
+        </div>
+      )}
+    </div>
+  );
 };
 
 const Note = noteData => {
   const [note] = useState(noteData.data);
-  const data = QueryComments(note._id);
+  const data = QueryData('comments', note._id);
 
   let comments;
   if (data !== undefined && data.data !== undefined) {
-    console.table(data.data);
+    // console.table(data.data);
     comments = data.data.map((comment, index) => {
-      return <Comment key={index} data={comment.comment} />;
+      return (
+        <Comment key={index} data={comment.comment} user={comment.userID} />
+      );
     });
   }
 

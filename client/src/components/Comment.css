@@ -1,4 +1,18 @@
+.comment-parent {
+  background-color: transparent;
+}
+
 .comment {
+  /* display: flex; */
   background: white;
   color: black;
+  border-radius: 7px;
+  margin-top: 5px;
+  padding: 0.25em;
+}
+
+.comment-name {
+  font-size: 0.8em;
+  background: inherit;
+  color: rgb(0, 0, 190);
 }
