@@ -21,3 +21,9 @@
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
 }
+
+.note__by {
+  background-color: inherit;
+  color: var(--name-color);
+  font-size: 0.8em;
+}
