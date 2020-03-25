@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { QueryData } from '../utils/Query';
 
 import './Comment.css';
