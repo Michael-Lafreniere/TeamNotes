@@ -1,18 +1,9 @@
 import React from 'react';
 import './App.css';
 
-import './components/NoteFeed';
+// import './components/NoteFeed';
 import NoteFeed from './components/NoteFeed';
-
-const NewNote = () => {
-  return (
-    <div className="new-note">
-      <input placeholder="New note title" />
-      <textarea rows="5" placeholder="Start a new note here" />
-      <button>Submit</button>
-    </div>
-  );
-};
+import NewNote from './components/NewNote';
 
 function App() {
   return (

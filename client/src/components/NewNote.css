@@ -1,0 +1,33 @@
+.new-note {
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  margin-top: 5%;
+  border: 1px solid black;
+  border-radius: 0.7em;
+  width: 50%;
+  align-items: center;
+  background: var(--background-color);
+}
+
+.new-note input {
+  width: 90%;
+  padding: 0.25em;
+  margin: 5px 0;
+  border-radius: 7px;
+  outline: none;
+}
+
+.new-note textarea {
+  width: 90%;
+  border-radius: 7px;
+  padding: 0.5em;
+  outline: none;
+  background: var(--body-background);
+  border: 1px solid black;
+}
+
+.new-note button {
+  width: 20%;
+  margin-bottom: 5px;
+}
