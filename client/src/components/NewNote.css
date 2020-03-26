@@ -1,16 +1,27 @@
 .new-note {
+  margin-top: 1%;
   display: flex;
-  flex-direction: column;
-  height: 30%;
-  margin-top: 5%;
-  border: 1px solid black;
-  border-radius: 0.7em;
-  width: 50%;
-  align-items: center;
-  background: var(--background-color);
+  justify-content: center;
+  /* flex-direction: column; */
+  width: 100%;
+  /* align-items: center; */
 }
 
-.new-note input {
+.new-note-group {
+  /* height: 30%; */
+  /* border: 1px solid black; */
+  border-radius: 0.7em;
+  /* margin-top: 5%; */
+  background: var(--background-color);
+  /* background: inherit; */
+  padding: 10px 0;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-note-group input {
   width: 90%;
   padding: 0.25em;
   margin: 5px 0;
@@ -18,7 +29,7 @@
   outline: none;
 }
 
-.new-note textarea {
+.new-note-group textarea {
   width: 90%;
   border-radius: 7px;
   padding: 0.5em;
@@ -27,7 +38,7 @@
   border: 1px solid black;
 }
 
-.new-note button {
+.new-note-group button {
   width: 20%;
   margin-bottom: 5px;
 }

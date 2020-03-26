@@ -1,16 +1,21 @@
 import React from 'react';
 import './App.css';
 
-// import './components/NoteFeed';
 import NoteFeed from './components/NoteFeed';
 import NewNote from './components/NewNote';
+
+const Header = () => {
+  return (
+    <header>
+      <h1 className="title">Team Notes</h1>
+    </header>
+  );
+};
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1 className="title">Team Notes</h1>
-      </header>
+      <Header />
       <NewNote />
       <NoteFeed />
     </div>
