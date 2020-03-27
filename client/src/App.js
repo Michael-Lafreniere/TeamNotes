@@ -1,24 +1,21 @@
 import React from 'react';
 import './App.css';
 
+import Header from './components/Header';
 import NoteFeed from './components/NoteFeed';
 import NewNote from './components/NewNote';
 
-const Header = () => {
-  return (
-    <header>
-      <h1 className="title">Team Notes</h1>
-    </header>
-  );
-};
+import { LoginContext } from './utils/Context';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <NewNote />
-      <NoteFeed />
-    </div>
+    <LoginContext.Provider>
+      <div className="App">
+        <Header />
+        <NewNote />
+        <NoteFeed />
+      </div>
+    </LoginContext.Provider>
   );
 }
 
