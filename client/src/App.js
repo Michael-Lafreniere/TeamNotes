@@ -10,8 +10,6 @@ import { LoginContext } from './utils/Context';
 function App() {
   const [user] = useState({ userID: '5e6820791c9d44000064761d' });
 
-  console.log('App user:', user);
-
   return (
     <LoginContext.Provider value={{ user }}>
       <div className="App">
