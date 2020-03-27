@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 import Header from './components/Header';
@@ -8,8 +8,12 @@ import NewNote from './components/NewNote';
 import { LoginContext } from './utils/Context';
 
 function App() {
+  const [user] = useState({ userID: '5e6820791c9d44000064761d' });
+
+  console.log('App user:', user);
+
   return (
-    <LoginContext.Provider>
+    <LoginContext.Provider value={{ user }}>
       <div className="App">
         <Header />
         <NewNote />
