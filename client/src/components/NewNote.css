@@ -32,10 +32,28 @@
   border: 1px solid black;
 }
 
-.new-note-group button {
+.lower-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+  padding: 0 1.35em;
+}
+
+.lower-row button {
   width: 15%;
   margin: 5px 0 0 0;
   border-radius: 7px;
   padding: 0.25em;
   cursor: pointer;
+}
+
+.icons {
+  background: inherit;
+}
+
+.icons img {
+  background: transparent;
+  height: 25px;
+  padding: 7px 5px 0 0;
 }
